@@ -49,10 +49,12 @@ public class LeerC implements Serializable{
     public void setResultado(String resultado) {
         this.resultado = resultado;
     }
-    public void limpiar(){
-        setResultado("");
+    public void limpiarDoc(){
+        Leer.limpiarDoc();
     }
-
+    public void limpiarDocumento(){
+        Leer.limpiarDocumento();
+    }
     public String getResultado2() {
         return resultado2;
     }

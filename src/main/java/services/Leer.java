@@ -84,6 +84,10 @@ public class Leer {
             File archivo1 = new File("C:\\Users\\ZERO\\Documents\\pruebas\\documento.txt");
             File subcarpeta = new File("C:\\Users\\ZERO\\Documents\\pruebas\\sub");
             FileUtils.copyFileToDirectory(archivo1, subcarpeta);
+            
+            File archivo2 = new File("C:\\Users\\ZERO\\Documents\\pruebas\\doc.txt");
+            File subcarpeta2 = new File("C:\\Users\\ZERO\\Documents\\pruebas\\sub");
+            FileUtils.copyFileToDirectory(archivo2, subcarpeta2);
             System.out.println("copiado");
         
         } catch (FileNotFoundException ex) {
@@ -100,6 +104,22 @@ public class Leer {
             Logger.getLogger(Leer.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(Leer.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    public static void limpiarDoc(){
+        try {
+            FileOutputStream writer = new FileOutputStream("C:\\Users\\ZERO\\Documents\\pruebas\\doc.txt");
+            writer.write(("").getBytes());
+            writer.close();
+        } catch (Exception e) {
+        }
+    }
+    public static void limpiarDocumento(){
+        try {
+            FileOutputStream writer = new FileOutputStream("C:\\Users\\ZERO\\Documents\\pruebas\\documento.txt");
+            writer.write(("").getBytes());
+            writer.close();
+        } catch (Exception e) {
         }
     }
 }
