@@ -22,6 +22,8 @@ public class LeerC implements Serializable{
     private String ingresos;
     private String text;
     private String text1;
+    private String resultado3="";
+    private String resultado4="";
     public LeerC(){
     }
     public void leee(){
@@ -41,6 +43,12 @@ public class LeerC implements Serializable{
     }
     public void eliminar(){
         Leer.eliminar();
+    }
+    public void datosText(){
+        resultado3= Leer.usingFilenameUtils(text);
+    }
+    public void fechaText(){
+        resultado4=Leer.usingLastModifiedFileComparator(text);
     }
     public String getResultado() {
         return resultado;
@@ -85,6 +93,22 @@ public class LeerC implements Serializable{
 
     public void setText1(String text1) {
         this.text1 = text1;
+    }
+
+    public String getResultado3() {
+        return resultado3;
+    }
+
+    public void setResultado3(String resultado3) {
+        this.resultado3 = resultado3;
+    }
+
+    public String getResultado4() {
+        return resultado4;
+    }
+
+    public void setResultado4(String resultado4) {
+        this.resultado4 = resultado4;
     }
     
 }
