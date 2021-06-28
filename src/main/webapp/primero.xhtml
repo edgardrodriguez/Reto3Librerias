@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <div class="ui-g-6">
+            <h:form>
+                <h1>salida 2</h1>
+                <p:panelGrid columns="1">
+                    <p:commandButton value="Calcular" update="resultado" action="#{LeerC.leee()}" />
+                    <p:inputTextarea value="#{LeerC.resultado}" id="resultado" rows="5" cols="30" />
+                    <p:button value="Limpiar" />
+                </p:panelGrid>
+            </h:form>
+            <h:form>
+                <h1>salida 2</h1>
+                <p:panelGrid columns="1">
+                    <p:commandButton value="Calcular" update="resultado" action="#{LeerC.lee2()}" />
+                    <p:inputTextarea value="#{LeerC.resultado2}" id="resultado" rows="5" cols="30" />
+                    <p:button value="Limpiar" />
+                </p:panelGrid>
+            </h:form>
+        </div>
+        <div class="ui-g-6">
+            <h:form>
+                <h1>ingreso</h1>
+                <p:panelGrid columns="1">
+                    <p:commandButton value="Calcular" update="resultado" action="#{LeerC.escribir()}" />
+                    <p:inputTextarea value="#{LeerC.text}" id="resultado" rows="5" cols="30" />
+                    <p:button value="Limpiar" />
+                </p:panelGrid>
+            </h:form>
+            <h:form>
+                <h1>ingreso 2</h1>
+                <p:panelGrid columns="1">
+                    <p:commandButton value="Calcular" update="resultado" action="#{LeerC.escribir2()}" />
+                    <p:inputTextarea value="#{LeerC.text1}" id="resultado" rows="5" cols="30" />
+                    <p:button value="Limpiar" />
+                </p:panelGrid>
+            </h:form>
+        </div>
+        <div class="ui-g-6">
+            <h1>boton copiado</h1>
+            <p:panelGrid columns="1">
+                <p:commandButton value="Copiar" action="#{LeerC.copiar()}"/>
+            </p:panelGrid>
+        </div>
+        <div class="ui-g-6">
+            <h1>boton eliminar</h1>
+            <p:panelGrid columns="1">
+                <p:commandButton value="Eliminar" action="#{LeerC.eliminar()}"/>
+            </p:panelGrid>
+        </div>
+    </h:body>
+</html>
+
